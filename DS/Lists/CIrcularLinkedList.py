@@ -192,3 +192,4 @@ print(cllist.is_circular_linked_list(llist))
 # cllist.print_list()
 
 # May be a small try
+# May be a push try
