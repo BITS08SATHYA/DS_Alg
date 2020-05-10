@@ -110,5 +110,29 @@ def quick_sort(A):
 
 
 # Shell Sort
+numbers = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+
+
 def shell_sort(A):
-    pass
+    subListCount = len(numbers) // 2
+    while subListCount > 0:
+        for i in range(subListCount):
+            SubListInsertionSort(numbers, i, subListCount)
+
+        print("After increments of size ", subListCount, "The list is ", numbers)
+        subListCount = subListCount // 2
+
+
+def SubListInsertionSort(numbers, start, gapSize):
+    for i in range(start+gapSize, len(numbers), gapSize):
+        currentValue = numbers[i]
+        index = i
+
+        while index >= gapSize and numbers[index-gapSize] > currentValue:
+            numbers[index] = numbers[index-gapSize]
+            index -= gapSize
+        numbers[index] = currentValue
+
+
+shell_sort(numbers)
+print(numbers)
