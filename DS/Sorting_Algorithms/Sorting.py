@@ -1,3 +1,7 @@
+# Sorting Algorthims
+A1 = [7, 8, 5, 4, 9, 2]
+
+
 # Insertion Sort
 def insertion_sort(A):
     for i in range(1, len(A)):
@@ -5,12 +9,6 @@ def insertion_sort(A):
         while A[j] > A[j + 1] and j >= 0:
             A[j], A[j + 1] = A[j + 1], A[j]
             j -= 1
-
-
-A1 = [7, 8, 5, 4, 9, 2]
-
-
-# print(insertion_sort(A1))
 
 
 # Selection Sort
@@ -111,6 +109,6 @@ def quick_sort(A):
     return A
 
 
-A2 = [7, 8, 5, 4, 9, 2]
-print("Quick Sort")
-print(quick_sort(A2))
+# Shell Sort
+def shell_sort(A):
+    pass
