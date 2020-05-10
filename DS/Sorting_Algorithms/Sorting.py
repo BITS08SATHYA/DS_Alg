@@ -134,5 +134,3 @@ def SubListInsertionSort(numbers, start, gapSize):
         numbers[index] = currentValue
 
 
-shell_sort(numbers)
-print(numbers)
